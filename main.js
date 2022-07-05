@@ -45,7 +45,7 @@ function my_keydown(e)
 {
 	keyPressed = e.keyCode;
 	console.log(keyPressed);
-	if((ball_x=hole_x)&&(ball_y=hole_y)){
+	if((ball_x==hole_x)&&(ball_y==hole_y)){
 		canvas.remove(ball_obj);
 		document.getElementById("hd3").innerHTML="You have hit the goal!!!";
 		document.getElementById("myCanvas").style.borderColor="red";
@@ -108,7 +108,7 @@ function my_keydown(e)
 		if(ball_x >5)
 		{
 			// Write a code to move ball left side.
-			ball_x = ball_y - block_image_width;
+			ball_x = ball_x - block_image_width;
 			console.log("block image height =" -block_image_width);
 			console.log("When down arrow key is pressed, X =" +ball_x +",Y =" +ball_y);
 			canvas.remove(ball_obj);
@@ -121,7 +121,7 @@ function my_keydown(e)
 		if(ball_x <=1050)
 		{
 			// Write a code to move ball right side.
-			ball_x = ball_y + block_image_width;
+			ball_x = ball_x + block_image_width;
 			console.log("block image height =" +block_image_width);
 			console.log("When down arrow key is pressed, X =" +ball_x +",Y =" +ball_y);
 			canvas.remove(ball_obj);
